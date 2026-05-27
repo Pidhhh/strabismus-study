@@ -1,35 +1,52 @@
-# Strabismus Classification: CNN vs CvT with CBAM Attention
+# Strabismus & Down Syndrome Classification: CNN vs CvT with CBAM Attention
 
-Comparative study of CNN-based architectures with and without CBAM attention mechanism, and a Convolutional Vision Transformer (CvT), for automated strabismus subtype classification.
+Comparative study of deep learning architectures (CNNs with/without CBAM attention mechanism and Convolutional Vision Transformers) applied to medical image classification tasks: automated strabismus subtype classification and Down Syndrome detection.
 
-## Dataset
+---
 
-**Source:** [Kaggle - ananthamoorthya/strabismus](https://www.kaggle.com/datasets/ananthamoorthya/strabismus) (509 images)
+## 1. Strabismus Subtype Classification
 
-**Classes (5):** ESOTROPIA, EXOTROPIA, HYPERTROPIA, HYPOTROPIA, NORMAL
+### Dataset
+* **Source:** [Kaggle - ananthamoorthya/strabismus](https://www.kaggle.com/datasets/ananthamoorthya/strabismus) (509 images)
+* **Classes (5):** ESOTROPIA, EXOTROPIA, HYPERTROPIA, HYPOTROPIA, NORMAL
+* **Data Split:**
+  * CNN notebooks: 80/10/10 (train/val/test) via `train_test_split` with `seed=31`
+  * CvT notebook: 70/15/15 (train/val/test) with `random.seed(42)`
 
-**Data Split:**
-- CNN notebooks: 80/10/10 (train/val/test) via `train_test_split` with `seed=31`
-- CvT notebook: 70/15/15 (train/val/test) with `random.seed(42)`
+### Experiments & Notebooks
 
-## Experiments
+#### CNN (with and without CBAM)
+| Notebook | Model | Attention | Patience |
+|---|---|---|---|
+| `CNN/Final_P10_Kaggle_Attention_Mechanism_Strabismus_Training.ipynb` | Xception | CBAM | 10 |
+| `CNN/Final_P10_Kaggle_NO_Attention_Mechanism_Strabismus_Train.ipynb` | Xception | None | 10 |
+| `CNN/Final_P15_Kaggle_Attention_Mechanism_Strabismus_Training.ipynb` | Xception | CBAM | 15 |
+| `CNN/Final_P15_Kaggle_NO_Attention_Mechanism_Strabismus_Traini.ipynb` | Xception | None | 15 |
 
-### CNN (with and without CBAM)
-
-| Notebook | Model | Attention |
-|---|---|---|
-| `Final_P10_Kaggle_Attention_Mechanism_Strabismus_Training.ipynb` | Xception | CBAM |
-| `Final_P10_Kaggle_NO_Attention_Mechanism_Strabismus_Train.ipynb` | Xception | None |
-| `Final_P15_Kaggle_Attention_Mechanism_Strabismus_Training.ipynb` | Xception | CBAM |
-| `Final_P15_Kaggle_NO_Attention_Mechanism_Strabismus_Traini.ipynb` | Xception | None |
-
-P10 / P15 denotes the patience variant used.
-
-### CvT
-
+#### CvT
 | Notebook | Models |
 |---|---|
-| `Final-Kaggle-CvT-Strabismus-no-w24.ipynb` | microsoft/cvt-21, microsoft/cvt-21-384, microsoft/cvt-w24 |
+| `CvT/Final-Kaggle-CvT-Strabismus-no-w24.ipynb` | microsoft/cvt-21, microsoft/cvt-21-384, microsoft/cvt-w24 |
+
+---
+
+## 2. Down Syndrome Classification
+
+### Dataset
+* **Source:** Private dataset (`downsyndrome-dataset`)
+* **Classes (2):** `downSyndrome`, `healty` (healthy)
+* **Data Split:**
+  * CNN notebooks: 80/10/10 (train/val/test) via `train_test_split` with `seed=31`
+
+### Experiments & Notebooks
+
+#### CNN (with and without CBAM)
+| Notebook | Model | Attention | Patience |
+|---|---|---|---|
+| `Downsyndrome/CNN/Final_P15_Kaggle_Attention_Mechanism_Downsyndrome_Training.ipynb` | Xception | CBAM | 15 |
+| `Downsyndrome/CNN/Final_P15_Kaggle_NO_Attention_Mechanism_Downsyndrome_Traini.ipynb` | Xception | None | 15 |
+
+---
 
 ## Requirements
 
