@@ -40,11 +40,35 @@ Comparative study of deep learning architectures (CNNs with/without CBAM attenti
 
 ### Experiments & Notebooks
 
-#### CNN (with and without CBAM)
+All Down Syndrome notebooks are located under `Downsyndrome/CNN/`.
+
+#### CNN (Attention Mechanism vs No Attention Mechanism)
 | Notebook | Model | Attention | Patience |
 |---|---|---|---|
-| `Downsyndrome/CNN/Final_P15_Kaggle_Attention_Mechanism_Downsyndrome_Training.ipynb` | Xception | CBAM | 15 |
-| `Downsyndrome/CNN/Final_P15_Kaggle_NO_Attention_Mechanism_Downsyndrome_Traini.ipynb` | Xception | None | 15 |
+| **Attention Mechanism / Xception** | | | |
+| `Attention Mechanism/Xception/e1-p15-kaggle-attention-mechanism-downsyndrome.ipynb` | Xception | CBAM | 15 |
+| `Attention Mechanism/Xception/e2-p10-kaggle-attention-mechanism-downsyndrome.ipynb` | Xception | CBAM | 10 |
+| `Attention Mechanism/Xception/e3-p5-kaggle-attention-mechanism-downsyndrome.ipynb` | Xception | CBAM | 5 |
+| **Attention Mechanism / Densenet** | | | |
+| `Attention Mechanism/Densenet/d1-p15-kaggle-attention-mechanism-downsyndrome.ipynb` | DenseNet121 | CBAM | 15 |
+| `Attention Mechanism/Densenet/d2-p10-kaggle-attention-mechanism-downsyndrome.ipynb` | DenseNet121 | CBAM | 10 |
+| `Attention Mechanism/Densenet/d3-p5-kaggle-attention-mechanism-downsyndrome.ipynb` | DenseNet121 | CBAM | 5 |
+| **Attention Mechanism / Efficientnet** | | | |
+| `Attention Mechanism/Efficientnet/e1-p15-kaggle-attention-mechanism-downsyndrome.ipynb` | EfficientNet_b0 | CBAM | 15 |
+| `Attention Mechanism/Efficientnet/e2-p10-kaggle-attention-mechanism-downsyndrome.ipynb` | EfficientNet_b0 | CBAM | 10 |
+| `Attention Mechanism/Efficientnet/e3-p5-kaggle-attention-mechanism-downsyndrome.ipynb` | EfficientNet_b0 | CBAM | 5 |
+| **No Attention Mechanism / Xception** | | | |
+| `No Attention Mechanism/Xception/e1-p15-kaggle-no-attention-mechanism-downsyndrom.ipynb` | Xception | None | 15 |
+| `No Attention Mechanism/Xception/e2-p10-kaggle-no-attention-mechanism-downsyndrom.ipynb` | Xception | None | 10 |
+| `No Attention Mechanism/Xception/e3-p5-kaggle-no-attention-mechanism-downsyndrom.ipynb` | Xception | None | 5 |
+| **No Attention Mechanism / Densenet** | | | |
+| `No Attention Mechanism/Densenet/d1-p15-kaggle-no-attention-mechanism-downsyndrom.ipynb` | DenseNet121 | None | 15 |
+| `No Attention Mechanism/Densenet/d2-p10-kaggle-no-attention-mechanism-downsyndrom.ipynb` | DenseNet121 | None | 10 |
+| `No Attention Mechanism/Densenet/d3-p5-kaggle-no-attention-mechanism-downsyndrom.ipynb` | DenseNet121 | None | 5 |
+| **No Attention Mechanism / Efficientnet** | | | |
+| `No Attention Mechanism/Efficientnet/e1-p15-kaggle-no-attention-mechanism-downsyndrom.ipynb` | EfficientNet_b0 | None | 15 |
+| `No Attention Mechanism/Efficientnet/e2-p10-kaggle-no-attention-mechanism-downsyndrom.ipynb` | EfficientNet_b0 | None | 10 |
+| `No Attention Mechanism/Efficientnet/e3-p5-kaggle-no-attention-mechanism-downsyndrom.ipynb` | EfficientNet_b0 | None | 5 |
 
 ---
 
